@@ -12,7 +12,11 @@
 %                the documents, the second column is the name of the word 
 %                and the third column is the number of appearance of the
 %                word in the corresponding document.
-function data = data_generate(M, D, K, alpha, beta, L)
+%      mixing    a matrix of order M * K. The i-th row is the distribution
+%                of topics for the i-th document.
+%      topics    a matrix of order K * D. The k-th row is the distribution
+%                of the words in the k-th topic.
+function [data, mixing, topics] = data_generate(M, D, K, alpha, beta, L)
 
 if nargin < 5
     beta = 1;
