@@ -4,4 +4,4 @@ Including functions:
 
 1. data_generate:
 
-2. 
+2. dirichletrnd: generate dirichlet distributed vector. 
