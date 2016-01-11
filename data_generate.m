@@ -6,7 +6,7 @@
 %                generate the mixing measure.
 %      beta      a scalar. The parameter of the dirichlet distribution when
 %                generate the topics.
-%      L         a row vector.
+%      L         a row vector. The lengths of the docs.
 % Output:
 %      data      a matrix of three columns. The first column is the name of
 %                the documents, the second column is the name of the word 

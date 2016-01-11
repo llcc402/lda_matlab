@@ -28,13 +28,13 @@ end
 
 mixing = zeros(M, K); % used for iteration
 for i = 1:M
-    mixing(i,:) = dirichletrnd(ones(1, K));
+    mixing(i,:) = dirichletrnd(alpha * ones(1, K));
 end
 mixing_mean = mixing; % used for output
 
 topics = zeros(K, D); % used for iteration
 for i = 1:K
-    topics(i,:) = dirichletrnd(ones(1, D));
+    topics(i,:) = dirichletrnd(beta * ones(1, D));
 end
 topics_mean = topics; % used for output
 
@@ -76,9 +76,6 @@ for iter = 1:maxIter
 
 end
 
-%--------------------------------------------------------------------------
-% STEP 3: evaluate the output variables and plotting
-%--------------------------------------------------------------------------
 mixing_mean = mixing_mean / recorded;
 topics_mean = topics_mean / recorded;
 
