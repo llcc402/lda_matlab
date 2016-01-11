@@ -8,6 +8,7 @@
 % where w_{d,i} is the prob of word i in doc d.
 function perp = perplexity(data, topics, Z)
 log_topics = log(topics);
+log_weight = 0;
 for i = 1:size(data, 1)
     for j = 1:size(data, 2)
         if data(i,j) ~= 0
